@@ -238,7 +238,7 @@ async function chat(){
   const id=++run;thread.innerHTML='';composer.classList.add('off');say.disabled=true;sendBtn.disabled=true;say.placeholder='Message';
   if(!await emma('Want to work together?'))return;
   if(!await emma('Have some thoughts on the readings?'))return;
-  if(!await emma('Drop me a line.'))return;
+  if(!await emma('Drop me a line. (you're sending me a real email!)'))return;
   const msg=await ask('text','Message');if(id!==run)return;
   if(!await emma('Thank you. What’s the best email to reach you?'))return;
   const from=await ask('email','Your email');if(id!==run)return;
